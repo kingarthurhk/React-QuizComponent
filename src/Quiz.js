@@ -26,9 +26,8 @@ constructor(props) {
       console.log("quizData.quiz_questions.instruction_text:"+quizData.quiz_questions.instruction_text);
         return (
             <div className = "QuizQuestion">        
-    {quizData.quiz_questions[0].instruction_text}
-    {/* {quizData.quiz_questions.filter(q => q.id === 1).instruction_text}     */}
-            
+            {quizData.quiz_questions[0].instruction_text}
+            {/* {quizData.quiz_questions.filter(q => q.id === 1).instruction_text}     */}
             </div>
           );
     }
