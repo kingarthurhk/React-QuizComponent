@@ -12,12 +12,12 @@ class QuizQuestion extends Component {
             <section>
               <p>
                   {/* //instruction text goes here */}
-                  {this.props.instruction_text }
+                  {this.props.quiz_question.instruction_text }
               </p>
             </section>
             <section className="buttons">
               <ul>
-                  {this.props.answer_options[0]}
+                  {this.props.quiz_question.answer_options[0]}
                 {/* //quiz question button logic goes here */}
               </ul>
             </section>

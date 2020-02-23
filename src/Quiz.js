@@ -26,7 +26,7 @@ constructor(props) {
       console.log("text2:"+text2);
       console.log("quizData.quiz_questions.instruction_text:"+quizData.quiz_questions.instruction_text);
       
-      let quiz_question = quizData.quiz_questions[this.state.quiz_position - 1];
+     // let quiz_question = quizData.quiz_questions[this.state.quiz_position - 1];
       return (
             // <div className = "QuizQuestion">        
             // {quizData.quiz_questions[0].instruction_text}
@@ -35,8 +35,10 @@ constructor(props) {
             // <div className = "QuizQuestion">
             //   <QuizQuestion {...quiz_question} />
             //   </div>
-            <QuizQuestion {...quiz_question} />
-
+            // <QuizQuestion {...quiz_question} />
+            <div>
+             <QuizQuestion quiz_question = {quizData.quiz_questions[this.state.quiz_position - 1]} />
+            </div>
           );
     }
 }
