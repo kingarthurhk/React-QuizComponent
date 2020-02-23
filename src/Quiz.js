@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 
+import QuizQuestion from './QuizQuestion';
 let quizData = require('./quiz_data.json')
 
 
@@ -24,11 +25,16 @@ constructor(props) {
       console.log("text1:"+text1.instruction_text);
       console.log("text2:"+text2);
       console.log("quizData.quiz_questions.instruction_text:"+quizData.quiz_questions.instruction_text);
-        return (
-            <div className = "QuizQuestion">        
-            {quizData.quiz_questions[0].instruction_text}
-            {/* {quizData.quiz_questions.filter(q => q.id === 1).instruction_text}     */}
-            </div>
+      
+      let quiz_question = quizData.quiz_questions[this.state.quiz_position - 1];
+      return (
+            // <div className = "QuizQuestion">        
+            // {quizData.quiz_questions[0].instruction_text}
+            // {/* {quizData.quiz_questions.filter(q => q.id === 1).instruction_text}     */}
+            // </div>
+            <div className = "QuizQuestion">
+              <QuizQuestion {...quiz_question} />
+              </div>
           );
     }
 }
