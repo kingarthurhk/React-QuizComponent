@@ -19,11 +19,15 @@ constructor(props) {
       console.log("quizData"+quizData);
       console.log("quizData.instruction_text"+quizData.instruction_text);
       console.log("quizData.quiz_questions:"+quizData.quiz_questions);
+      let text1 = quizData.quiz_questions.filter(q => q.id === 1);
+      let text2 = quizData.quiz_questions.instruction_text;//filter(q => q.id === 1);
+      console.log("text1:"+text1.instruction_text);
+      console.log("text2:"+text2);
       console.log("quizData.quiz_questions.instruction_text:"+quizData.quiz_questions.instruction_text);
         return (
-            <div className = "QuizQuestion">        {text.instruction_text}Quiz
+            <div className = "QuizQuestion">        
     {quizData.quiz_questions[0].instruction_text}
-            
+    {/* {quizData.quiz_questions.filter(q => q.id === 1).instruction_text}     */}
             
             </div>
           );
