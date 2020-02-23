@@ -22,7 +22,7 @@ constructor(props) {
       console.log("quizData.quiz_questions.instruction_text:"+quizData.quiz_questions.instruction_text);
         return (
             <div className = "QuizQuestion">        {text.instruction_text}Quiz
-    
+    {quizData.quiz_questions[0].instruction_text}
             
             
             </div>
