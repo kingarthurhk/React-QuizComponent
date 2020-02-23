@@ -32,9 +32,11 @@ constructor(props) {
             // {quizData.quiz_questions[0].instruction_text}
             // {/* {quizData.quiz_questions.filter(q => q.id === 1).instruction_text}     */}
             // </div>
-            <div className = "QuizQuestion">
-              <QuizQuestion {...quiz_question} />
-              </div>
+            // <div className = "QuizQuestion">
+            //   <QuizQuestion {...quiz_question} />
+            //   </div>
+            <QuizQuestion {...quiz_question} />
+
           );
     }
 }
